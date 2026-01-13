@@ -90,7 +90,6 @@ int main()
 {
     double amount = 0;
     int payment = 0;
-    std::unique_ptr<IPaymentStrategy> paymentStrategy;
     
     std::cout<<"Enter amount "<<std::endl;
     std::cin>>amount;
