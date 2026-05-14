@@ -1,0 +1,50 @@
+Important design pattern cheat sheet:
+
+Creational pattern:
+1. singleton: 
+Ensure one class has only one instance.
+static variable is thread safe and lazy intialization in c++ 11
+
+2. Factory method:
+Creates object without exposing creation logic.
+Depends on abstarction not concrete class
+Client will have only Factory class
+Follow open/close principle- easy extensible 
+
+3. Builder:
+Build object that requires many steps or optional parameter.
+Avoids telescoping constructor.
+Fluent interface — each method returns *this for chaining.
+Solves the telescoping constructor anti-pattern
+Director class can be added to standardize build sequence.
+
+Structural pattern:
+
+1. Adapter:
+Make incompatible interface work together.
+You have an existing class but its interface does not match with client expectation.
+
+2. Decorator:
+Add behaviour at runtime
+Add responsibility to object at runtime without modifying the class
+The decorator class has both is a relation and has a relation
+
+3.Proxy:
+A surrogates that control access to another object
+Control access to an object - for lazy loading, caching, logging restrict
+
+Behavioural pattern:
+1. Observer:
+Notify many when changes
+When subject changes, all dependent are notified imediately
+Cores of event driven system , GUI framework.
+
+2. Strategy:
+Swap or chnage strategy at runtime
+eliminates if and else chains for algorithm.
+Used haevily on payment system, routing restrict
+
+3. Command:
+Encapsulate an request as an object.
+Undo redo an classical example.
+Invoker does not know what command does, complete decoupling.
