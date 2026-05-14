@@ -9,9 +9,14 @@ static variable is thread safe and lazy intialization in c++ 11
 Creates object without exposing creation logic.
 Depends on abstarction not concrete class
 Client will have only Factory class
-Follow open/close principle- easy extensible 
+Follow open/close principle- easy extensible
 
-3. Builder:
+4. Abstract factory (Factories of factory):
+Creates a family of related objects without specifying the concrete classes.
+Unlike factory method(one product) abstract facory creates a group of products.
+eg Button and Checkbox factory for windows and mac
+
+4. Builder:
 Build object that requires many steps or optional parameter.
 Avoids telescoping constructor.
 Fluent interface — each method returns *this for chaining.
@@ -33,6 +38,13 @@ The decorator class has both is a relation and has a relation
 A surrogates that control access to another object
 Control access to an object - for lazy loading, caching, logging restrict
 
+4. Facade:
+One simple interface over a complex system
+Provides a simple interface to a complex system hiding internal cpmplexity from client.
+5. Composite design pattern:
+Treat individual object and group same way.
+Classical example file sytems, UI widgets tree, org chart
+
 Behavioural pattern:
 1. Observer:
 Notify many when changes
@@ -48,3 +60,9 @@ Used haevily on payment system, routing restrict
 Encapsulate an request as an object.
 Undo redo an classical example.
 Invoker does not know what command does, complete decoupling.
+
+4. State:
+Object changes behvaiour when its state changes.
+An object should behave diffrently based on its state, eliminates massive if else and switch chaining.
+vending machine, atm machine, order processing , tcp connection are clasic example.
+
